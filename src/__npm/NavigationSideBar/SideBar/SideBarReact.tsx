@@ -12,6 +12,7 @@ import { SideBarProps } from "../type";
 import { COLORS } from "../../colors";
 
 export const SideBarReact = ({
+  children,
   SideBarItems,
   activeIndex,
   company,
@@ -60,6 +61,7 @@ export const SideBarReact = ({
           </Grid>
         </GridContainer>
       </Drawer>
+      <Grid> {children}</Grid>
     </Box>
   );
 };

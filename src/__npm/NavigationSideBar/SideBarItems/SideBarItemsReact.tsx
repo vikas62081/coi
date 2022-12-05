@@ -6,21 +6,23 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { useStyles } from "../navigation.styles";
 import { ItemProps, SidebarItemProps } from "../type";
+import { Link } from "react-router-dom";
 
 export const SideBarItemReact = (props: SidebarItemProps) => {
   const [activeItem, setActiveItem] = useState(0);
   const classes = useStyles();
-
+  console.log(classes);
   const handleChange = (index: number) => {
     setActiveItem(index);
   };
+  console.log(activeItem);
   return (
     <>
       <ListContainer data-testid="To-be-Active">
         {props?.SideBarItems?.map((SideBarItem: ItemProps, index: number) => (
-          <a
+          <Link
             key={index}
-            href={SideBarItem?.to}
+            to={SideBarItem?.to}
             style={{ color: "inherit", textDecoration: "inherit" }}
           >
             <ListItem
@@ -44,7 +46,7 @@ export const SideBarItemReact = (props: SidebarItemProps) => {
               </Tooltip>
               <ListItemText primary={SideBarItem?.title} />
             </ListItem>
-          </a>
+          </Link>
         ))}
       </ListContainer>
     </>
