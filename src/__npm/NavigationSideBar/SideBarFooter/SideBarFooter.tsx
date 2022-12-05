@@ -25,7 +25,7 @@ export const SideBarFooter = (props: any) => {
       {open && <Divider />}
       {open && isEnterpriseChild && hideCard && (
         <ClientCard>
-          <ClientImage>{/* <Image link={image} /> */}</ClientImage>
+          <ClientImage>{image}</ClientImage>
           <ClientContent>
             <StyledCompanyTypography>{company}</StyledCompanyTypography>
             <StyledTypography>{address}</StyledTypography>
@@ -38,9 +38,7 @@ export const SideBarFooter = (props: any) => {
       )}
       {open && (
         <ListItem className={classes.FooterIcon}>
-          <ListItemIcon className={classes.footerLogo}>
-            {/* <Image link="/images/icons/myCOI.svg" height={20} width={20} /> */}
-          </ListItemIcon>
+          <ListItemIcon className={classes.footerLogo}>{image}</ListItemIcon>
           <ListItemText className={classes.poweredBy}>
             Powered by myCOI
           </ListItemText>

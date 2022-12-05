@@ -24,7 +24,7 @@ export type ListProps = {
 export type ButtonAppBarProps = {
   clientId?: string;
   userName?: string;
-  image?: string;
+  image: React.ReactElement;
   appBar?: AppBarProps;
   optionList?: ListProps[];
   menuList?: ListProps[];
@@ -42,7 +42,7 @@ export const ButtonAppBar = ({
     <StyledAppBar {...props} style={{ position: "inherit" }}>
       <Toolbar>
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          {/* <Image link={image} height={70} width={70} /> */}
+          {image}
 
           {clientId && (
             <>

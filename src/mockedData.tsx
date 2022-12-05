@@ -17,7 +17,7 @@ export const sidebarData = {
   email: "morehumanthanhuman.com",
   phone: "708-252-0235",
   activeIndex: 2,
-  image: "HEy",
+  image: <PeopleAltRoundedIcon />,
   SideBarItems: [
     {
       title: "Home",
@@ -67,7 +67,7 @@ export const headerData = {
   title2: "Feedback",
   clientId: "Kim",
   userName: "TestUser",
-  image: "HEy",
+  image: <PeopleAltRoundedIcon />,
   menuList: [
     {
       title: "Account Settings",

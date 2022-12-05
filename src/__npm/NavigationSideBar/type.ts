@@ -13,7 +13,7 @@ export type SideBarProps = {
   address?: string;
   phone?: string;
   email?: string;
-  image?: string;
+  image: ReactElement;
   isEnterpriseChild: boolean;
   activeIndex?: number;
   initialState?: boolean;
